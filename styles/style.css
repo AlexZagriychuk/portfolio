@@ -56,7 +56,11 @@ body {
   letter-spacing: 0.05em;
   line-height: 1.5em;
   word-spacing: 0.1em;
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.intro__desc p {
+  margin-top: 20px;
 }
 
 .intro__contact-me {
@@ -88,9 +92,9 @@ body {
 }
 
 /*----------------------------------
------------      cv     ------------
+---------      resume     ----------
 ------------------------------------*/
-.cv {
+.resume {
   background-color: #eee;
   padding: 50px 0;
 }
