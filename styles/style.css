@@ -8,13 +8,13 @@ body {
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 10px;
 }
 
 .title {
   font-size: 40px;
   font-style: italic;
   font-weight: 900;
-  margin-bottom: 30px;
 }
 
 .flex-column-center {
@@ -28,7 +28,7 @@ body {
 ------------------------------------*/
 .intro {
   background: linear-gradient(to bottom right, #2480e9, #98caee);
-  padding: 50px;
+  padding: 50px 0;
 }
 
 .intro__photo {
@@ -88,6 +88,7 @@ body {
 -------       about-me      --------
 ------------------------------------*/
 .about-me {
+  background-color: #eee;
   padding: 50px 0;
 }
 
@@ -95,7 +96,7 @@ body {
 ---------      resume     ----------
 ------------------------------------*/
 .resume {
-  background-color: #eee;
+  background-color: #fff;
   padding: 50px 0;
 }
 
@@ -103,6 +104,7 @@ body {
 --------      portfolio     --------
 ------------------------------------*/
 .portfolio {
+  background-color: #eee;
   padding: 50px 0;
 }
 
@@ -110,8 +112,55 @@ body {
 ------      certificates     -------
 ------------------------------------*/
 .certificates {
-  background-color: #eee;
+  background-color: #fff;
   padding: 50px 0;
+}
+
+.certificates__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.certificates__cert {
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 30px;
+  padding: 10px;
+  width: calc(50% - 20px); /* must be calc( 50% - [.certificates__cert:nth-child(2n)].margin-left / 2 ) */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.certificates__cert:hover {
+  border-color: #2480e9;
+  box-shadow: 0px 0px 10px 0 #2480e9;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.certificates__cert:nth-child(2n) {
+  margin-left: 40px;
+}
+
+.cert__title {
+  color: #000;
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+.cert__date {
+  color: #555;
+  font-size: 22px;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.cert__photo {
+  margin: auto 0;
+}
+.cert__photo img {
+  width: 100%;
+  object-fit: contain;
 }
 
 /*----------------------------------
@@ -120,4 +169,17 @@ body {
 .footer {
   background: linear-gradient(to bottom, #98caee, #2480e9);
   padding: 20px 0;
+}
+
+/*----------------------------------
+---------      media      ----------
+------------------------------------*/
+@media (max-width: 767px) {
+  .certificates__cert {
+    width: 100%;
+  }
+
+  .certificates__cert:nth-child(2n) {
+    margin-left: 0;
+  }
 }
