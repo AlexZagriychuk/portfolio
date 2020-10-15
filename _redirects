@@ -1,2 +1,1 @@
-/bikeshop  https://awesome-bohr-a4110d.netlify.app  200
-/bikeshop2  https://awesome-bohr-a4110d.netlify.app
+/bikeshop/*  https://awesome-bohr-a4110d.netlify.app/:splat 200
