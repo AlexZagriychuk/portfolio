@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexander Zagriychuk - Software Engineer</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
   <header class="intro">
     <div class="wrapper flex-column-center">
       <div class="intro__photo">
-        <img src="img/my photo.png" alt="My Photo">
+        <img src="./img/my photo.png" alt="My Photo">
       </div>
       <div class="intro__desc">
         <p>Hello, my name is Alexander Zagriychuk.</p>
@@ -35,12 +35,12 @@
         <ul>
           <li>Was drafted after the university graduation and served 1 year of a mandatory military service</li>
           <li>Worked at the same company for my whole career (6.5 years), providing testing services for different clients</li>
-          <li>Learnt English while never being in any English-speaking country (before I moved to Canada).<br>Achieved extremely high score (for a non-native language speaker) on my IELTS General English language proficiency exam (Overall band = 8.5, Reading = 9.0, Listening = 8.5, Speaking = 8.0, Writing = 7.5; where 9.0 is the maximum possible test score)</li>
-          <li>Moved to Canada in the end of August 2020 as a permanent resident</li>
+          <li>Learned English while never being in any English-speaking country (before I moved to Canada).<br>Achieved extremely high score (for a non-native language speaker) on my IELTS General English language proficiency exam (Overall band = 8.5, Reading = 9.0, Listening = 8.5, Speaking = 8.0, Writing = 7.5; where 9.0 is the maximum possible test score)</li>
+          <li>Moved to Canada at the end of August 2020 as a permanent resident</li>
         </ul>
         <h2 class="about-me__facts-title">Hobbies:</h2>
         <ul>
-          <li>Watching sports (NFL, NBA, Football/Soccer, Golf, Hockey, F1, etc.) and playing sports computer games</li>
+          <li>Watching sports (NFL, NBA, Football/Soccer, Golf, Hockey, F1, and other) and playing sports computer games</li>
           <li>Viewing the content about personal finances and investments (stocks and real estate brrrr)</li>
           <li>Watching YouTube videos on a broad range of software-related topics</li>
           <li>Enjoying the natural beauty of Vancouver, BC</li>
@@ -60,7 +60,34 @@
   <section class="portfolio">
     <div class="wrapper flex-column-center">
       <h1 class="portfolio__title title">Portfolio</h1>
-      <p>My portfolio</p>
+      <p class="portfolio__disclaimer">Disclaimer: I am currently taking a mentorship-based front-end development course (HTML/CSS, JQuery, JavaScript, React). So far, I only have one HTML/CSS project presented in my portfolio. Upon progressing with my course, I plan to add a few projects with JavaScript and React to my portfolio within about one month.</p>
+      <ul class="portfolio__list">
+        <li class="portfolio__project">
+          <h2 class="portfolio__project-title">The Bike Shop</h2>
+          <div class="portfolio__project-picture-and-info">
+            <img class="portfolio__project-picture" src="./img/The Bike Shop project.jpg" alt="The Bike Shop project">
+            <div class="portfolio__project-info">
+              <div class="portfolio__project-description short-description">
+                <p><span>Tech stack: HTML5, CSS3.</span> Responsive design was created by me from scratch. The website supports different browsers, including IE11.</p>
+                <a class="portfolio__project-show-info project-show-more">Show more...</a>
+              </div>
+              <div class="portfolio__project-description full-description">
+                <p>Tech stack: HTML5, CSS3</p>
+                <ul>
+                  <li>This responsive website was created using HTML5 and CSS3 only (except for the burger menu button in the mobile view) while trying to follow the BEM methodology.</li>
+                  <li>The website supports different browsers, including IE11.</li>
+                  <li>The website was designed by me from scratch (with the training task requiring 3 pages to be created: Home, About Us, and Contact), including the logo/favicon, which was designed in https://www.designevo.com/</li>
+                </ul>
+                <a class="portfolio__project-show-info project-show-less">Show less...</a>
+              </div>
+              <div class="portfolio__project-links">
+                <a class="portfolio__project-website portfolio-project-link" href="./bikeshop/" target="_blank">Website</a>
+                <a class="portfolio__project-github portfolio-project-link" href="https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website" target="_blank">Github</a>
+              </div>
+            </div>
+          </div>
+        </li> <!-- /portfolio__project -->
+      </ul>
     </div>
   </section> <!-- /portfolio -->
 
@@ -69,24 +96,24 @@
       <h1 class="certificates__title title">Certificates</h1>
       <ul class="certificates__list">
         <li>
-          <a class="certificates__cert" href="certificates/Java 8 Certificate.pdf" target="_blank">
+          <a class="certificates__cert" href="./certificates/Java 8 Certificate.pdf" target="_blank">
             <div class="cert__desc">
               <h2 class="cert__title">Oracle Certified Associate, Java SE 8 Programmer</h2>
               <div class="cert__date">Date: April 2018</div>
             </div>
             <div class="cert__photo">
-              <img src="certificates/Java 8 Certificate.jpg" alt="Java SE 8 Programmer Certificate">
+              <img src="./certificates/Java 8 Certificate.jpg" alt="Java SE 8 Programmer Certificate">
             </div>
           </a>
         </li>
         <li>
-          <a class="certificates__cert" href="certificates/ISTQB Certificate.pdf" target="_blank">
+          <a class="certificates__cert" href="./certificates/ISTQB Certificate.pdf" target="_blank">
             <div class="cert__desc">
               <h2 class="cert__title">ISTQB Certified Tester, Foundation Level</h2>
               <div class="cert__date">Date: March 2013</div>
             </div>
             <div class="cert__photo">
-              <img src="certificates/ISTQB Certificate.jpg" alt="ISTQB Certificate">
+              <img src="./certificates/ISTQB Certificate.jpg" alt="ISTQB Certificate">
             </div>
           </a>
         </li>
@@ -100,6 +127,8 @@
       <p id="email">E-mail: AlexZagriychuk@gmail.com</p>
     </div>
   </footer> <!-- /footer -->
+
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>

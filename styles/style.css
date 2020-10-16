@@ -136,6 +136,146 @@ body {
   padding: 50px 0;
 }
 
+.portfolio__disclaimer {
+  margin: 30px 30px 0;
+}
+
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.portfolio__project {
+  height: 100%;
+  width: calc(50% - 20px); /* must be calc( 50% - [.portfolio__project:nth-child(2n)].margin-left / 2 ) */
+  margin-top: 40px;
+  overflow: hidden;
+  position: relative;
+  transition: border-color 0.5s, box-shadow 0.5s, transform 1s;
+}
+
+.portfolio__project:nth-child(2n) {
+  margin-left: 40px;
+}
+
+.portfolio__project:hover {
+  border-color: #2480e9;
+  box-shadow: 0 0 10px 2px #2480e9;
+  transition: border-color 0.5s, box-shadow 0.5s, transform 1s;
+  transform: scale(1.05);
+}
+
+.portfolio__project-title {
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+  transition: color 0.5s, text-shadow 0.5s;
+}
+
+.portfolio__project:hover .portfolio__project-title {
+  color: #2480e9;
+  text-shadow: 2px 2px 5px #2480e9;
+  transition: color 0.5s, text-shadow 0.5s;
+}
+
+.portfolio__project-picture-and-info {
+  position: relative;
+}
+
+.portfolio__project-picture {
+  width: 100%;
+}
+
+.portfolio__project-info {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;
+  height: 0;
+  min-height: 0;
+  overflow: hidden;
+  transition: height 1s, min-height 1s;
+  width: 100%;
+}
+
+.portfolio__project:hover .portfolio__project-info {
+  height: 30%;
+  min-height: 140px;
+  transition: height 1s, min-height 1s;
+}
+
+.portfolio__project:hover .portfolio__project-info.show-full-description {
+  height: 100%;
+  overflow-y: auto;
+  transition: height 1s, min-height 1s;
+}
+
+.portfolio__project-description {
+  font-size: 18px;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.portfolio__project-info .short-description,
+.portfolio__project-info.show-full-description .full-description {
+  display: block;
+}
+
+.portfolio__project-info .full-description,
+.portfolio__project-info.show-full-description .short-description {
+  display: none;
+}
+
+.full-description p,
+.short-description p span {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.full-description li {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.portfolio__project-description > * {
+  display: inline;
+}
+
+.portfolio__project-description a {
+  color: #4c99f0;
+  cursor: pointer;
+}
+
+.portfolio__project-description a:hover {
+  color: #2480e9;
+}
+
+.portfolio__project-links {
+  margin-bottom: 10px;
+}
+
+.portfolio-project-link {
+  color: #fff;
+  font-weight: 700;
+  font-style: italic;
+  transition: color 0.2s;
+}
+
+.portfolio-project-link:hover {
+  color: #2480e9;
+  transition: color 0.2s;
+}
+
+.portfolio__project-github {
+  margin-left: 50px;
+}
+
 /*----------------------------------
 ------      certificates     -------
 ------------------------------------*/
@@ -208,12 +348,42 @@ body {
 /*----------------------------------
 ---------      media      ----------
 ------------------------------------*/
+@media (max-width: 1024px) {
+  .portfolio__project {
+    width: 95%;
+  }
+
+  .portfolio__project:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .portfolio__project:hover .portfolio__project-info {
+    height: 20%;
+  }
+}
+
 @media (max-width: 767px) {
+  .portfolio__project:hover .portfolio__project-info {
+    height: 35%;
+  }
+
   .certificates__list li {
     width: 100%;
   }
 
   .certificates__list li:nth-child(2n) {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio__project:hover .portfolio__project-info {
+    height: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio__project:hover .portfolio__project-info {
+    height: 100%;
   }
 }
