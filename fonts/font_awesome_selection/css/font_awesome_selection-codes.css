@@ -4,8 +4,12 @@
 .icon-website:before { content: '\e802'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-doc-text:before { content: '\f0f6'; } /* '' */
 .icon-desktop-1:before { content: '\f108'; } /* '' */
+.icon-doc-text-inv:before { content: '\f15c'; } /* '' */
 .icon-skype:before { content: '\f17e'; } /* '' */
+.icon-file-pdf:before { content: '\f1c1'; } /* '' */
+.icon-file-word:before { content: '\f1c2'; } /* '' */
 .icon-git-squared:before { content: '\f1d2'; } /* '' */
 .icon-github-squared:before { content: '\f300'; } /* '' */
 .icon-linkedin-squared:before { content: '\f30c'; } /* '' */
