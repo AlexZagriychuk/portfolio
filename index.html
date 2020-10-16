@@ -63,7 +63,7 @@
   <section class="portfolio">
     <div class="wrapper flex-column-center">
       <h1 class="portfolio__title title">Portfolio</h1>
-      <p class="portfolio__disclaimer">Disclaimer: I am currently taking a mentorship-based front-end development course (HTML/CSS, JQuery, JavaScript, React). So far, I only have one HTML/CSS project presented in my portfolio. Upon progressing with my course, I plan to add a few projects with JavaScript and React to my portfolio within about one month.</p>
+      <p class="portfolio__disclaimer">Disclaimer: I am currently taking a mentorship-based front-end development course (HTML/CSS, JQuery, JavaScript, React). So far, I only have HTML/CSS projects presented in my portfolio. Upon progressing with my course, I plan to add a few projects with JavaScript and React to my portfolio.</p>
       <ul class="portfolio__list">
         <li class="portfolio__project">
           <h2 class="portfolio__project-title">The Bike Shop</h2>
@@ -84,8 +84,33 @@
                 <a class="portfolio__project-show-info project-show-less">Show less...</a>
               </div>
               <div class="portfolio__project-links">
-                <a class="portfolio__project-website portfolio-project-link icon-desktop-1" href="./bikeshop/" target="_blank">Website</a>
-                <a class="portfolio__project-github portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website" target="_blank">Github</a>
+                <a class="portfolio-project-link icon-desktop-1" href="./bikeshop/" target="_blank">Website</a>
+                <a class="portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website" target="_blank">Github</a>
+              </div>
+            </div>
+          </div>
+        </li> <!-- /portfolio__project -->
+
+        <li class="portfolio__project">
+          <h2 class="portfolio__project-title">Portfolio Website</h2>
+          <div class="portfolio__project-picture-and-info">
+            <img class="portfolio__project-picture" src="./img/Portfolio.jpg" alt="Portfolio project">
+            <div class="portfolio__project-info">
+              <div class="portfolio__project-description short-description">
+                <p><span>Tech stack: HTML5, CSS3, JavaScript.</span> Hosted the website on Netlify. Went through the problems with linking another website as a "subfolder" of the portfolio.</p>
+                <a class="portfolio__project-show-info project-show-more">Show more...</a>
+              </div>
+              <div class="portfolio__project-description full-description">
+                <p>Tech stack: HTML5, CSS3, JavaScript.</p>
+                <ul>
+                  <li>The portfolio website was created using HTML5, CSS3, and a little bit of JavaScript.</li>
+                  <li>Faced with a problem when attempted to display another website (The Bike Shop) as a "subfolder" of the portfolio website ("https://alexzagriychuk.com/bikeshop/"). Solved it by using the Netlify "_redirects" file with splat option activated ("/bikeshop/*  https://.../:splat 200")".</li>
+                  <li>The second major problem I went through was that the "subfolder" website, opened by the URL without closing slash "/" ("https://alexzagriychuk.com/bikeshop"), would break after attempting to navigate to another page ("ABOUT US", "CONTACT"), because without the closing slash, all relative paths would try to get resources in the root page "alexzagriychuk.com/" rather than the current page "alexzagriychuk.com/bikeshop/". I created a workaround solution by adding the "Snippet injection" in the Netlify "Build & deploy" / "Post processing" section. This snippet adds JavaScript code before the end of the "head" section of the "subfolder" website`s index.html file. This code adds the slash at the end of the URL if the "subfolder" website was opened without the trailing slash in the URL.</li>
+                </ul>
+                <a class="portfolio__project-show-info project-show-less">Show less...</a>
+              </div>
+              <div class="portfolio__project-links">
+                <a class="portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/portfolio" target="_blank">Github</a>
               </div>
             </div>
           </div>

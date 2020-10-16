@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var showMoreElements = document.getElementsByClassName("project-show-less");
-  for (var i = 0; i < showMoreElements.length; i++) {
-    showMoreElements[i].addEventListener("click", function (e) {
+  var showLessElements = document.getElementsByClassName("project-show-less");
+  for (var i = 0; i < showLessElements.length; i++) {
+    showLessElements[i].addEventListener("click", function (e) {
       console.log(e.target);
       var ancestor = findAncestor(e.target, ".portfolio__project-info");
       console.log(ancestor);
