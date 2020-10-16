@@ -225,7 +225,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: #555;
+  background-color: #aaa;
   height: 0;
   min-height: 0;
   overflow: hidden;
@@ -278,13 +278,15 @@ body {
 }
 
 .portfolio__project-description a {
-  color: #4c99f0;
+  color: #1e72d1;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .portfolio__project-description a:hover,
 .portfolio__project-description a:focus {
-  color: #2480e9;
+  color: #1841b1;
 }
 
 .portfolio__project-links {
