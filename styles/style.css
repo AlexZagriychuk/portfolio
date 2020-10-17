@@ -446,8 +446,18 @@ body {
 }
 
 @media (max-width: 767px) {
+  .portfolio__project-info {
+    position: relative;
+    height: auto;
+  }
+
   .portfolio__project:hover .portfolio__project-info {
-    height: 35%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .portfolio__project:hover .portfolio__project-info.show-full-description {
+    height: auto;
   }
 
   .certificates__list li {
@@ -456,17 +466,5 @@ body {
 
   .certificates__list li:nth-child(2n) {
     margin-left: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .portfolio__project:hover .portfolio__project-info {
-    height: 50%;
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio__project:hover .portfolio__project-info {
-    height: 100%;
   }
 }
