@@ -433,6 +433,7 @@ body {
   }
 
   .portfolio__project {
+    display: block;
     width: 95%;
   }
 
