@@ -122,37 +122,6 @@ body {
 }
 
 /*----------------------------------
----------      resume     ----------
-------------------------------------*/
-.resume {
-  background-color: #fff;
-  padding: 50px 0;
-}
-
-.resume__download-file {
-  border: 1px solid #2480e9;
-  border-radius: 10px;
-  color: #2480e9;
-  display: inline-block;
-  font-size: 25px;
-  margin-top: 40px;
-  padding: 10px;
-  transition: all 0.2s;
-}
-
-.resume__download-file + .resume__download-file {
-  margin-left: 30px;
-}
-
-.resume__download-file:hover,
-.resume__download-file:focus {
-  background-color: #2480e9;
-  box-shadow: 0 0 10px 3px #2480e9;
-  color: #fff;
-  transition: all 0.2s;
-}
-
-/*----------------------------------
 --------      portfolio     --------
 ------------------------------------*/
 .portfolio {
@@ -423,15 +392,6 @@ body {
 ---------      media      ----------
 ------------------------------------*/
 @media (max-width: 1024px) {
-  .resume__download-file {
-    display: block;
-    text-align: center;
-  }
-  
-  .resume__download-file + .resume__download-file {
-    margin: 30px auto 0 auto;
-  }
-
   .portfolio__project {
     display: block;
     width: 95%;
