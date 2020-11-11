@@ -24,6 +24,14 @@ body {
   align-items: center;
 }
 
+section:nth-child(2n) {
+  background-color: #fff;
+}
+
+section:nth-child(2n + 1) {
+  background-color: #eee;
+}
+
 /*----------------------------------
 ---------       intro      ---------
 ------------------------------------*/
@@ -90,7 +98,6 @@ body {
 -------       about-me      --------
 ------------------------------------*/
 .about-me {
-  background-color: #eee;
   padding: 50px 0;
 }
 
@@ -125,7 +132,6 @@ body {
 --------      portfolio     --------
 ------------------------------------*/
 .portfolio {
-  background-color: #eee;
   padding: 50px 0;
 }
 
@@ -283,7 +289,6 @@ body {
 ------      certificates     -------
 ------------------------------------*/
 .certificates {
-  background-color: #fff;
   padding: 50px 0;
 }
 
@@ -392,6 +397,10 @@ body {
 ---------      media      ----------
 ------------------------------------*/
 @media (max-width: 1024px) {
+  .portfolio__disclaimer {
+    margin: 30px 0 0;
+  }
+
   .portfolio__project {
     display: block;
     width: 95%;
