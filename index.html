@@ -30,18 +30,19 @@
       <h2 class="about-me__title title">About Me</h2>
       <div class="about-me__text">
         <p>I started my career in the software industry as a manual tester. After learning some programming skills outside of work and applying them to creating a few small utilities and automating some manual work processes, I fell in love with programming.</p>
-        <p>I worked as a manual tester for 2 years, and then I moved to a testing automation / developer in test role and have been working in this role for 5.5 years (including 1 year in Canada).</p>
+        <p>I worked as a manual tester for 2 years and then I switched to a test automation / developer in test role and have been working in this role for 6.5 years (including almost 2 years in Canada).</p>
       </div>
       <div class="about-me__facts">
-        <h3 class="about-me__facts-title">Some life and career facts:</h3>
+        <h3 class="about-me__facts-title">Some life facts:</h3>
         <ul>
-          <li>Worked at the same company for 6.5 years before moving to Canada, providing testing services for different clients. Additionally, I have 1 year of work experience in Canada</li>
-          <li>Learned English while never being in any English-speaking country (before I moved to Canada).<br>Achieved extremely high score (for a non-native language speaker) on my IELTS General English language proficiency exam (Overall band = 8.5, Reading = 9.0, Listening = 8.5, Speaking = 8.0, Writing = 7.5; where 9.0 is the maximum possible test score)</li>
+          <li>Learned English while never being in any English-speaking country (before I moved to Canada).<br>
+              Achieved extremely high score (for a non-native language speaker) on my IELTS General English language proficiency exam (Overall band = 8.5, Reading = 9.0, Listening = 8.5, Speaking = 8.0, Writing = 7.5; where 9.0 is the maximum possible test score)
+          </li>
           <li>Moved to Canada at the end of August 2020 as a permanent resident</li>
         </ul>
         <h3 class="about-me__facts-title">Hobbies:</h3>
         <ul>
-          <li>Watching sports (NFL, NBA, Football/Soccer, Golf, F1, and other) and playing sports computer games</li>
+          <li>Watching sports (NFL, NBA, NHL, Football/Soccer, Golf, F1, and other) and playing sports computer games</li>
           <li>Viewing the content about personal finances and investments (stocks and real estate BRRRR method)</li>
           <li>Watching YouTube videos on a broad range of software-related topics</li>
           <li>Playing golf and enjoying the natural beauty of Vancouver, BC</li>
@@ -54,7 +55,7 @@
   <section class="portfolio">
     <div class="wrapper flex-column-center">
       <h2 class="portfolio__title title">Portfolio</h2>
-      <p class="portfolio__disclaimer">Disclaimer: I've been taking a mentorship-based front-end development course (HTML/CSS, JQuery, JavaScript, React) to improve my knowledge in development technologies. So far, I only have HTML/CSS projects presented in my portfolio. I plan to add a few projects with JavaScript and React to my portfolio at some point.</p>
+      <p class="portfolio__disclaimer">A few HTML/CSS portfolio projects that I created while taking a mentorship-based HTML/CSS course to improve my knowledge in these technologies:</p>
       <ul class="portfolio__list">
         <li class="portfolio__project">
           <h3 class="portfolio__project-title">The Bike Shop</h3>
@@ -70,7 +71,7 @@
                 <ul>
                   <li>This responsive website was created using HTML5 and CSS3 only (except for the burger menu button in the mobile view) while trying to follow the BEM methodology.</li>
                   <li>The website supports different browsers, including IE11.</li>
-                  <li>The website was designed by me from scratch (with the training task requiring 3 pages to be created: Home, About Us, and Contact), including the logo/favicon, which was designed in https://www.designevo.com/</li>
+                  <li>The website was designed by me from scratch (following the training task which required to create 3 pages: Home, About Us, and Contact), including the logo/favicon, which was designed in https://www.designevo.com/</li>
                 </ul>
                 <a class="portfolio__project-show-info project-show-less">Show less...</a>
               </div>
@@ -85,7 +86,7 @@
         <li class="portfolio__project">
           <h3 class="portfolio__project-title">Portfolio Website</h3>
           <div class="portfolio__project-picture-and-info">
-            <img class="portfolio__project-picture" src="./img/Portfolio.jpg" alt="Portfolio project">
+            <img class="portfolio__project-picture" src="./img/Portfolio.png" alt="Portfolio project">
             <div class="portfolio__project-info">
               <div class="portfolio__project-description short-description">
                 <p><span>Tech stack: HTML5, CSS3, JavaScript.</span> Hosted the website on Netlify. Went through the problems with linking another website as a "subfolder" of the portfolio.</p>
@@ -96,7 +97,7 @@
                 <ul>
                   <li>The portfolio website was created using HTML5, CSS3, and a little bit of JavaScript. Hosted the website on Netlify.</li>
                   <li>Faced with a problem when attempted to display another website (The Bike Shop) as a "subfolder" of the portfolio website ("alexzagriychuk.com/bikeshop/"). Solved it by using the Netlify "_redirects" file with splat option activated ("/bikeshop/*  https://.../:splat 200").</li>
-                  <li>The second major problem I went through was that the "subfolder" website, opened by the URL without closing slash "/" ("alexzagriychuk.com/bikeshop"), would break after attempting to navigate to another page ("ABOUT US", "CONTACT"), because without the closing slash, all relative paths would try to get resources in the root page "alexzagriychuk.com/" rather than the current page "alexzagriychuk.com/bikeshop/". I created a workaround solution by adding the "Snippet injection" in the Netlify "Build & deploy" / "Post processing" section. This snippet adds JavaScript code before the end of the "head" section of the "subfolder" website`s index.html file. This code adds the slash at the end of the URL if the "subfolder" website was opened without the trailing slash in the URL.</li>
+                  <li>The second major problem I went through was that the "subfolder" website, opened by the URL without closing slash "/" ("alexzagriychuk.com/bikeshop"), would break after attempting to navigate to another page ("ABOUT US", "CONTACT"), because without the closing slash, all relative paths would try to get resources in the root page "alexzagriychuk.com/" rather than the current page "alexzagriychuk.com/bikeshop/". I created a workaround solution by adding the "Snippet injection" in the Netlify "Build & deploy" / "Post processing" section. This snippet adds JavaScript code before the end of the "head" section of the "subfolder" website`s index.html file. This code adds the slash at the end of the URL if the "subfolder" website is opened without the trailing slash in the URL.</li>
                 </ul>
                 <a class="portfolio__project-show-info project-show-less">Show less...</a>
               </div>
