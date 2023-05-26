@@ -59,10 +59,10 @@
       <h2 class="portfolio__title title">Portfolio</h2>
       <p class="portfolio__disclaimer">A few HTML/CSS portfolio projects that I created while taking a mentorship-based HTML/CSS course to improve my knowledge in these technologies:</p>
       <ul class="portfolio__list">
-        <li class="portfolio__project">
+        <li class="portfolio__project" tabindex="0">
           <h3 class="portfolio__project-title">The Bike Shop</h3>
-          <div class="portfolio__project-picture-and-info">
-            <img class="portfolio__project-picture" src="./img/The%20Bike%20Shop%20project.jpg" alt="The Bike Shop project">
+          <div class="portfolio__project-preview-and-info">
+            <iframe class="portfolio__project-preview" src="https://alexzagriychuk.com/bikeshop/" scrolling="no" tabindex="-1"></iframe>
             <div class="portfolio__project-info">
               <div class="portfolio__project-description short-description">
                 <p><span>Tech stack: HTML5, CSS3.</span> Responsive design was created by me from scratch. The website supports different browsers, including IE11.</p>
@@ -78,33 +78,33 @@
                 <a class="portfolio__project-show-info project-show-less">Show less...</a>
               </div>
               <div class="portfolio__project-links">
-                <a class="portfolio-project-link icon-desktop-1" href="./bikeshop/" target="_blank">Website</a>
-                <a class="portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website" target="_blank">Github</a>
+                <a class="portfolio-project-link icon-desktop-1" href="./bikeshop/" target="_blank" tabindex="-1">Website</a>
+                <a class="portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website" target="_blank" tabindex="-1">Github</a>
               </div>
             </div>
           </div>
         </li> <!-- /portfolio__project -->
 
-        <li class="portfolio__project">
+        <li class="portfolio__project" tabindex="0">
           <h3 class="portfolio__project-title">Portfolio Website</h3>
-          <div class="portfolio__project-picture-and-info">
-            <img class="portfolio__project-picture" src="./img/Portfolio.png" alt="Portfolio project">
+          <div class="portfolio__project-preview-and-info">
+            <iframe class="portfolio__project-preview" src="https://alexzagriychuk.com" scrolling="no" tabindex="-1"></iframe>
             <div class="portfolio__project-info">
               <div class="portfolio__project-description short-description">
-                <p><span>Tech stack: HTML5, CSS3, JavaScript.</span> Hosted the website on Netlify. Went through the problems with linking another website as a "subfolder" of the portfolio.</p>
+                <p><span>Tech stack: HTML5, CSS3, JavaScript.</span> Hosted the website on Netlify. Went through the problems with linking another website as a "nested route" of the portfolio.</p>
                 <a class="portfolio__project-show-info project-show-more">Show more...</a>
               </div>
               <div class="portfolio__project-description full-description">
                 <p>Tech stack: HTML5, CSS3, JavaScript.</p>
                 <ul>
                   <li>The portfolio website was created using HTML5, CSS3, and a little bit of JavaScript. Hosted the website on Netlify.</li>
-                  <li>Faced with a problem when attempted to display another website (The Bike Shop) as a "subfolder" of the portfolio website ("alexzagriychuk.com/bikeshop/"). Solved it by using the Netlify "_redirects" file with splat option activated ("/bikeshop/*  https://.../:splat 200").</li>
-                  <li>The second major problem I went through was that the "subfolder" website, opened by the URL without closing slash "/" ("alexzagriychuk.com/bikeshop"), would break after attempting to navigate to another page ("ABOUT US", "CONTACT"), because without the closing slash, all relative paths would try to get resources in the root page "alexzagriychuk.com/" rather than the current page "alexzagriychuk.com/bikeshop/". I created a workaround solution by adding the "Snippet injection" in the Netlify "Build & deploy" / "Post processing" section. This snippet adds JavaScript code before the end of the "head" section of the "subfolder" website`s index.html file. This code adds the slash at the end of the URL if the "subfolder" website is opened without the trailing slash in the URL.</li>
+                  <li>Faced with a problem when attempted to display another website (The Bike Shop) as a "nested route" of the portfolio website ("alexzagriychuk.com/bikeshop/"). Solved it by using the Netlify "_redirects" file with splat option activated ("/bikeshop/*  https://.../:splat 200").</li>
+                  <li>The second major problem I went through was that the "nested route" website, opened by the URL without closing slash "/" ("alexzagriychuk.com/bikeshop"), would break after attempting to navigate to another page ("ABOUT US", "CONTACT"), because without the closing slash, all relative paths would try to get resources in the root page "alexzagriychuk.com/" rather than the current page "alexzagriychuk.com/bikeshop/". I created a workaround solution by adding the "Snippet injection" in the Netlify "Build & deploy" / "Post processing" section. This snippet adds JavaScript code before the end of the "head" section of the "nested route" website`s index.html file. This code adds the slash at the end of the URL if the "nested route" website is opened without the trailing slash in the URL.</li>
                 </ul>
                 <a class="portfolio__project-show-info project-show-less">Show less...</a>
               </div>
               <div class="portfolio__project-links">
-                <a class="portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/portfolio" target="_blank">Github</a>
+                <a class="portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/portfolio" target="_blank" tabindex="-1">Github</a>
               </div>
             </div>
           </div>

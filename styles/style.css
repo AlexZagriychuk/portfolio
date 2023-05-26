@@ -191,13 +191,31 @@ section:nth-child(2n + 1) {
   transition: color 0.5s, text-shadow 0.5s, transform 0.5s;
 }
 
-.portfolio__project-picture-and-info {
+.portfolio__project-preview-and-info {
   position: relative;
   flex-grow: 1;
 }
 
-.portfolio__project-picture {
-  width: 100%;
+.portfolio__project-preview {
+  /* settings to preview a live website inside an iframe without the ability to interact with it */
+  overflow: hidden;
+  pointer-events: none;
+
+  width: 200% !important;
+  height: 200% !important;
+  min-height: 500px;
+
+  -ms-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 
 .portfolio__project-info {
@@ -215,13 +233,13 @@ section:nth-child(2n + 1) {
   width: 100%;
 }
 
-.portfolio__project:hover .portfolio__project-info {
+.portfolio__project:hover .portfolio__project-info, .portfolio__project:focus .portfolio__project-info {
   height: 30%;
   min-height: 160px;
   transition: height 1s, min-height 1s;
 }
 
-.portfolio__project:hover .portfolio__project-info.show-full-description {
+.portfolio__project:hover .portfolio__project-info.show-full-description, .portfolio__project:focus .portfolio__project-info.show-full-description {
   height: 100%;
   overflow-y: auto;
   transition: height 1s, min-height 1s;
@@ -403,6 +421,12 @@ section:nth-child(2n + 1) {
 /*----------------------------------
 ---------      media      ----------
 ------------------------------------*/
+@media (max-width: 1480px) {
+  .portfolio__project-preview {
+    min-height: 400px;
+  }
+}
+
 @media (max-width: 1024px) {
   .intro__photo {
     flex: 350px 0 0;
@@ -418,7 +442,6 @@ section:nth-child(2n + 1) {
   }
 
   .portfolio__project {
-    display: block;
     width: 95%;
   }
 
@@ -426,8 +449,12 @@ section:nth-child(2n + 1) {
     margin-left: 0;
   }
 
-  .portfolio__project:hover .portfolio__project-info {
+  .portfolio__project:hover .portfolio__project-info, .portfolio__project:focus .portfolio__project-info {
     height: 20%;
+  }
+
+  .portfolio__project-preview {
+    min-height: 500px;
   }
 }
 
@@ -448,19 +475,9 @@ section:nth-child(2n + 1) {
   .intro__desc p {
     margin-top: 30px;
   }
-  
-  .portfolio__project-info {
-    position: relative;
-    height: auto;
-  }
 
-  .portfolio__project:hover .portfolio__project-info {
-    height: auto;
-    min-height: 0;
-  }
-
-  .portfolio__project:hover .portfolio__project-info.show-full-description {
-    height: auto;
+  .portfolio__project-preview {
+    min-height: 400px;
   }
 
   .certificates__list li {
