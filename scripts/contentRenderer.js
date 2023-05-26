@@ -71,7 +71,7 @@ export function renderContent() {
         aboutMeTextParagraphs: [
             "I started my career in the software industry as a manual tester. After learning some programming skills outside of work and applying them to creating a few small utilities and automating some manual work processes, I fell in love with programming.",
             "I worked as a manual tester for 2 years and then I switched to a test automation / developer in test role and have been working in this role for 6.5 years (including almost 2 years in Canada).",
-            "Now I want to leverage all my previously acquired skills and experience, start a new chapter in my technical career and switch from the SDET role into a Web Developer role (Frontend, Full-stack, or Backend Web Developer).",
+            "Now I want to leverage all my previously acquired skills and experience, start a new chapter in my technical career and switch from the SDET role into a Web Developer role (Frontend, Full Stack, or Backend Web Developer).",
         ],
         lifeFacts: [
             "Learned English while never being in any English-speaking country (before I moved to Canada). Achieved very high score for a non-native language speaker on my IELTS General English language proficiency exam (Overall band = 8.5, Reading = 9.0, Listening = 8.5, Speaking = 8.0, Writing = 7.5; where 9.0 is the maximum possible test score)",
