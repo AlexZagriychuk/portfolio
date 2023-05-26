@@ -19,8 +19,7 @@
       </div>
       <div class="flex-column-center">
         <div class="intro__desc">
-          <p>Hello, my name is Alexander Zagriychuk.</p>
-          <p>I am a Software Developer living in Vancouver, BC, Canada.</p>
+          <!-- Will be rendered from JSON (contentRenderer.js) -->
         </div>
         <a class="intro__contact-me" href="#contacts">Contact Me</a>
       </div>
@@ -31,23 +30,16 @@
     <div class="wrapper flex-column-center">
       <h2 class="about-me__title title">About Me</h2>
       <div class="about-me__text">
-        <p>I started my career in the software industry as a manual tester. After learning some programming skills outside of work and applying them to creating a few small utilities and automating some manual work processes, I fell in love with programming.</p>
-        <p>I worked as a manual tester for 2 years and then I switched to a test automation / developer in test role and have been working in this role for 6.5 years (including almost 2 years in Canada).</p>
+        <!-- Will be rendered from JSON (contentRenderer.js) -->
       </div>
       <div class="about-me__facts">
         <h3 class="about-me__facts-title">Some life facts:</h3>
-        <ul>
-          <li>Learned English while never being in any English-speaking country (before I moved to Canada).<br>
-              Achieved extremely high score (for a non-native language speaker) on my IELTS General English language proficiency exam (Overall band = 8.5, Reading = 9.0, Listening = 8.5, Speaking = 8.0, Writing = 7.5; where 9.0 is the maximum possible test score)
-          </li>
-          <li>Moved to Canada at the end of August 2020 as a permanent resident</li>
+        <ul id="about-me__life-facts-list">
+          <!-- Will be rendered from JSON (contentRenderer.js) -->
         </ul>
         <h3 class="about-me__facts-title">Hobbies:</h3>
-        <ul>
-          <li>Watching sports (NFL, NBA, NHL, Football/Soccer, Golf, F1, and other) and playing sports computer games</li>
-          <li>Viewing the content about personal finances and investments (stocks and real estate BRRRR method)</li>
-          <li>Watching YouTube videos on a broad range of software-related topics</li>
-          <li>Playing golf and enjoying the natural beauty of Vancouver, BC</li>
+        <ul id="about-me__hobbies-list">
+          <!-- Will be rendered from JSON (contentRenderer.js) -->
         </ul>
       </div>
 
@@ -57,58 +49,9 @@
   <section class="portfolio">
     <div class="wrapper flex-column-center">
       <h2 class="portfolio__title title">Portfolio</h2>
-      <p class="portfolio__disclaimer">A few HTML/CSS portfolio projects that I created while taking a mentorship-based HTML/CSS course to improve my knowledge in these technologies:</p>
+      <p class="portfolio__disclaimer">...</p>
       <ul class="portfolio__list">
-        <li class="portfolio__project" tabindex="0">
-          <h3 class="portfolio__project-title">The Bike Shop</h3>
-          <div class="portfolio__project-preview-and-info">
-            <iframe class="portfolio__project-preview" src="https://alexzagriychuk.com/bikeshop/" scrolling="no" tabindex="-1"></iframe>
-            <div class="portfolio__project-info">
-              <div class="portfolio__project-description short-description">
-                <p><span>Tech stack: HTML5, CSS3.</span> Responsive design was created by me from scratch. The website supports different browsers, including IE11.</p>
-                <a class="portfolio__project-show-info project-show-more">Show more...</a>
-              </div>
-              <div class="portfolio__project-description full-description">
-                <p>Tech stack: HTML5, CSS3</p>
-                <ul>
-                  <li>This responsive website was created using HTML5 and CSS3 only (except for the burger menu button in the mobile view) while trying to follow the BEM methodology.</li>
-                  <li>The website supports different browsers, including IE11.</li>
-                  <li>The website was designed by me from scratch (following the training task which required to create 3 pages: Home, About Us, and Contact), including the logo/favicon, which was designed in https://www.designevo.com/</li>
-                </ul>
-                <a class="portfolio__project-show-info project-show-less">Show less...</a>
-              </div>
-              <div class="portfolio__project-links">
-                <a class="portfolio-project-link icon-desktop-1" href="./bikeshop/" target="_blank" tabindex="-1">Website</a>
-                <a class="portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website" target="_blank" tabindex="-1">Github</a>
-              </div>
-            </div>
-          </div>
-        </li> <!-- /portfolio__project -->
-
-        <li class="portfolio__project" tabindex="0">
-          <h3 class="portfolio__project-title">Portfolio Website</h3>
-          <div class="portfolio__project-preview-and-info">
-            <iframe class="portfolio__project-preview" src="https://alexzagriychuk.com" scrolling="no" tabindex="-1"></iframe>
-            <div class="portfolio__project-info">
-              <div class="portfolio__project-description short-description">
-                <p><span>Tech stack: HTML5, CSS3, JavaScript.</span> Hosted the website on Netlify. Went through the problems with linking another website as a "nested route" of the portfolio.</p>
-                <a class="portfolio__project-show-info project-show-more">Show more...</a>
-              </div>
-              <div class="portfolio__project-description full-description">
-                <p>Tech stack: HTML5, CSS3, JavaScript.</p>
-                <ul>
-                  <li>The portfolio website was created using HTML5, CSS3, and a little bit of JavaScript. Hosted the website on Netlify.</li>
-                  <li>Faced with a problem when attempted to display another website (The Bike Shop) as a "nested route" of the portfolio website ("alexzagriychuk.com/bikeshop/"). Solved it by using the Netlify "_redirects" file with splat option activated ("/bikeshop/*  https://.../:splat 200").</li>
-                  <li>The second major problem I went through was that the "nested route" website, opened by the URL without closing slash "/" ("alexzagriychuk.com/bikeshop"), would break after attempting to navigate to another page ("ABOUT US", "CONTACT"), because without the closing slash, all relative paths would try to get resources in the root page "alexzagriychuk.com/" rather than the current page "alexzagriychuk.com/bikeshop/". I created a workaround solution by adding the "Snippet injection" in the Netlify "Build & deploy" / "Post processing" section. This snippet adds JavaScript code before the end of the "head" section of the "nested route" website`s index.html file. This code adds the slash at the end of the URL if the "nested route" website is opened without the trailing slash in the URL.</li>
-                </ul>
-                <a class="portfolio__project-show-info project-show-less">Show less...</a>
-              </div>
-              <div class="portfolio__project-links">
-                <a class="portfolio-project-link icon-github-circled" href="https://github.com/AlexZagriychuk/portfolio" target="_blank" tabindex="-1">Github</a>
-              </div>
-            </div>
-          </div>
-        </li> <!-- /portfolio__project -->
+        <!-- Will be rendered from JSON (contentRenderer.js) -->
       </ul>
     </div>
   </section> <!-- /portfolio -->
@@ -117,28 +60,7 @@
     <div class="wrapper flex-column-center">
       <h2 class="certificates__title title">Certificates</h2>
       <ul class="certificates__list">
-        <li>
-          <a class="certificates__cert" href="./resources/certificates/Java%208%20Certificate.pdf" target="_blank">
-            <div class="cert__desc">
-              <h3 class="cert__title">Oracle Certified Associate, Java SE 8 Programmer</h3>
-              <div class="cert__date">Date: April 2018</div>
-            </div>
-            <div class="cert__photo">
-              <img src="./resources/certificates/Java%208%20Certificate.jpg" alt="Java SE 8 Programmer Certificate">
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="certificates__cert" href="./resources/certificates/ISTQB%20Certificate.pdf" target="_blank">
-            <div class="cert__desc">
-              <h3 class="cert__title">ISTQB Certified Tester, Foundation Level</h3>
-              <div class="cert__date">Date: March 2013</div>
-            </div>
-            <div class="cert__photo">
-              <img src="./resources/certificates/ISTQB%20Certificate.jpg" alt="ISTQB Certificate">
-            </div>
-          </a>
-        </li>
+        <!-- Will be rendered from JSON (contentRenderer.js) -->
       </ul>
     </div>
   </section> <!-- /certificates -->
@@ -155,7 +77,7 @@
     </div>
   </footer> <!-- /footer -->
 
-  <script src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>
