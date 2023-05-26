@@ -162,7 +162,9 @@ section:nth-child(2n + 1) {
   overflow: hidden;
   position: relative;
   transition: border-color 0.5s, box-shadow 0.5s, transform 1s;
-  border-radius: 10px;
+  border: 1px solid #c2ccd8;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #c2ccd8;
 }
 
 .portfolio__project:nth-child(2n) {
@@ -332,6 +334,9 @@ section:nth-child(2n + 1) {
 .certificates__list li {
   margin-top: 30px;
   width: calc(50% - 20px); /* must be calc( 50% - [.certificates__list li:nth-child(2n)].margin-left / 2 ) */
+  border: 1px solid #c2ccd8;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #c2ccd8;
 }
 
 .certificates__list li:nth-child(2n) {
