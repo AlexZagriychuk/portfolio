@@ -82,8 +82,19 @@ export function renderContent() {
             "Playing golf and enjoying the natural beauty of Vancouver, BC",
         ],
         portfolio: {
-            disclaimer: "A few HTML/CSS portfolio projects that I created while taking a mentorship-based HTML/CSS course to improve my knowledge in these technologies:",
+            disclaimer: "A few HTML/CSS/JavaScript/React portfolio projects I created while taking a mentorship-based Frontend Development course:",
             projects: [
+                {
+                    title: "Comfy (furniture shop)",
+                    fullWebsiteUrl: "https://alexzagriychuk.com/comfy/",
+                    githubUrl: "https://github.com/AlexZagriychuk/javascript-learning/tree/main/task2_8",
+                    showWebsiteLink: true,
+                    techStack: "HTML5, CSS3, JavaScript",
+                    shortDescription: "Website has functionality to add/remove items from a cart from different pages, and the state is being stored in the browser localStorage.",
+                    fullDescriptionBullets: [
+                        "To Be added..."
+                    ]
+                },
                 {
                     title: "The Bike Shop",
                     fullWebsiteUrl: "https://alexzagriychuk.com/bikeshop/",
@@ -96,7 +107,6 @@ export function renderContent() {
                         "The website supports different browsers, including IE11.",
                         "The website was designed by me from scratch (following the training task which required to create 3 pages: Home, About Us, and Contact), including the logo/favicon, which was designed in https://www.designevo.com/"
                     ]
-            
                 },
                 {
                     title: "Portfolio Website",
@@ -110,7 +120,7 @@ export function renderContent() {
                         "Faced with a problem when attempted to display another website (The Bike Shop) as a 'nested route' of the portfolio website ('alexzagriychuk.com/bikeshop/'). Solved it by using the Netlify '_redirects' file with splat option activated ('/bikeshop/*  https://.../:splat 200').",
                         "The second major problem I went through was that the 'nested route' website, opened by the URL without closing slash '/' ('alexzagriychuk.com/bikeshop'), would break after attempting to navigate to another page ('ABOUT US', 'CONTACT'), because without the closing slash, all relative paths would try to get resources in the root page 'alexzagriychuk.com/' rather than the current page 'alexzagriychuk.com/bikeshop/'. I created a workaround solution by adding the 'Snippet injection' in the Netlify 'Build & deploy' / 'Post processing' section. This snippet adds JavaScript code before the end of the 'head' section of the 'nested route' website`s index.html file. This code adds the slash at the end of the URL if the 'nested route' website is opened without the trailing slash in the URL."
                     ]
-                }
+                },
             ]
         },
         certificates: [
