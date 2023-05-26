@@ -28,11 +28,11 @@ function generatePortfolioProjectHTML({title, fullWebsiteUrl, githubUrl, showWeb
               <div class="portfolio__project-links">`
     
     if(showWebsiteLink) {
-        res += `<a class="portfolio-project-link icon-desktop-1" href="${fullWebsiteUrl}" target="_blank" tabindex="-1">Website</a>`
+        res += `<a class="portfolio-project-link icon-desktop-1" href="${fullWebsiteUrl}" target="_blank">Website</a>`
     }
            
     res += `
-                <a class="portfolio-project-link icon-github-circled" href="${githubUrl}" target="_blank" tabindex="-1">Github</a>
+                <a class="portfolio-project-link icon-github-circled" href="${githubUrl}" target="_blank">Github</a>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export function renderContent() {
         ],
         lifeFacts: [
             "Learned English while never being in any English-speaking country (before I moved to Canada). Achieved very high score for a non-native language speaker on my IELTS General English language proficiency exam (Overall band = 8.5, Reading = 9.0, Listening = 8.5, Speaking = 8.0, Writing = 7.5; where 9.0 is the maximum possible test score)",
-            "Moved to Canada in the middle of COVID pandemic (at the end of August 2020) as a permanent resident"
+            "Moved to Canada in the middle of the COVID pandemic (at the end of August 2020) as a permanent resident"
         ],
         hobbies: [
             "Watching sports (NFL, NBA, NHL, Football/Soccer, Golf, F1, and other) and playing sports computer games",

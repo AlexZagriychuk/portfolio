@@ -173,7 +173,8 @@ section:nth-child(2n + 1) {
 }
 
 .portfolio__project:hover,
-.portfolio__project:focus {
+.portfolio__project:focus,
+.portfolio__project:focus-within {
   border-color: #2480e9;
   box-shadow: 0 0 10px 2px #2480e9;
   transition: border-color 0.5s, box-shadow 0.5s, transform 1s;
@@ -239,13 +240,17 @@ section:nth-child(2n + 1) {
   border-top-right-radius: 10px;
 }
 
-.portfolio__project:hover .portfolio__project-info, .portfolio__project:focus .portfolio__project-info {
+.portfolio__project:hover .portfolio__project-info,
+.portfolio__project:focus .portfolio__project-info,
+.portfolio__project:focus-within .portfolio__project-info {
   height: 30%;
   min-height: 160px;
   transition: height 1s, min-height 1s;
 }
 
-.portfolio__project:hover .portfolio__project-info.show-full-description, .portfolio__project:focus .portfolio__project-info.show-full-description {
+.portfolio__project:hover .portfolio__project-info.show-full-description,
+.portfolio__project:focus .portfolio__project-info.show-full-description,
+.portfolio__project:focus-within .portfolio__project-info.show-full-description {
   height: 100%;
   overflow-y: auto;
   transition: height 1s, min-height 1s;
@@ -461,7 +466,9 @@ section:nth-child(2n + 1) {
     margin-left: 0;
   }
 
-  .portfolio__project:hover .portfolio__project-info, .portfolio__project:focus .portfolio__project-info {
+  .portfolio__project:hover .portfolio__project-info,
+  .portfolio__project:focus .portfolio__project-info,
+  .portfolio__project:focus-within .portfolio__project-info {
     height: 20%;
   }
 
