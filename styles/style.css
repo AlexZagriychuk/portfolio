@@ -224,6 +224,16 @@ section:nth-child(2n + 1) {
   transform-origin: 0 0;
 }
 
+.portfolio__project-preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: transparent;
+}
+
 .portfolio__project-info {
   position: absolute;
   bottom: 0;
@@ -239,6 +249,7 @@ section:nth-child(2n + 1) {
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  z-index: 11;
 }
 
 .portfolio__project:hover .portfolio__project-info,

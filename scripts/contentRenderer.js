@@ -7,6 +7,7 @@ function generatePortfolioProjectHTML({title, fullWebsiteUrl, githubUrl, showWeb
           <h3 class="portfolio__project-title">${title}</h3>
           <div class="portfolio__project-preview-and-info">
             <iframe class="portfolio__project-preview" src="${fullWebsiteUrl}" scrolling="no" tabindex="-1"></iframe>
+            <div class="portfolio__project-preview-overlay"></div>
             <div class="portfolio__project-info">
               <div class="portfolio__project-description short-description">
                 <p><span>Tech stack: ${techStack}.</span> ${shortDescription}</p>
