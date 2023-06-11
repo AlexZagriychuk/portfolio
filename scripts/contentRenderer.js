@@ -89,15 +89,17 @@ export function renderContent() {
             disclaimer: "A few HTML / CSS / JavaScript / React portfolio projects I created while taking a mentorship-based Frontend Development course (no copy-pasting from tutorials, this program has tasks and a mentor who gives feedback after the task is submitted for review):",
             projects: [
                 {
-                    title: "React APP (Posts/Todos/Users)",
+                    title: "React App (Posts/Todos/Users)",
                     fullWebsiteUrl: "https://alexzagriychuk.com/react/",
                     githubUrl: "https://github.com/AlexZagriychuk/react-learning",
                     showWebsiteLink: true,
                     techStack: "React, Redux, TypeScript, CSS",
-                    shortDescription: "[In progress] Interactive React App with Posts, Todos, Users data fetched via API (Redux controls the state, RTK Query caches API responses to avoid redundant network load)",
+                    shortDescription: "Interactive React App with Posts, Todos, Users data fetched via API (Redux controls the state, RTK Query caches API responses to avoid redundant network load)",
                     fullDescriptionBullets: [
+                        "[Development In Progress]...",
                         "Interactive React App with Posts, Todos, Users data fetched via API (Redux controls the state, RTK Query caches API requests to avoid redundant network load)",
-                        "... Development still in progress ...",
+                        "Users data is being used for all 3 pages (Posts, Todos, Users)",
+                        "An active user can be changed after clicking on the button at the top right corner (Todos data and Posts styles would be different based on the currently active user)",
                         "... Description not finished yet ..."
                     ]
                 },
