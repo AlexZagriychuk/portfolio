@@ -89,6 +89,19 @@ export function renderContent() {
             disclaimer: "A few HTML / CSS / JavaScript / React portfolio projects I created while taking a mentorship-based Frontend Development course (no copy-pasting from tutorials, this program has tasks and a mentor who gives feedback after the task is submitted for review):",
             projects: [
                 {
+                    title: "React APP (Posts/Todos/Users)",
+                    fullWebsiteUrl: "https://alexzagriychuk.com/react/",
+                    githubUrl: "https://github.com/AlexZagriychuk/react-learning",
+                    showWebsiteLink: true,
+                    techStack: "React, Redux, TypeScript, CSS",
+                    shortDescription: "[In progress] Interactive React App with Posts, Todos, Users data fetched via API (Redux controls the state, RTK Query caches API responses to avoid redundant network load)",
+                    fullDescriptionBullets: [
+                        "Interactive React App with Posts, Todos, Users data fetched via API (Redux controls the state, RTK Query caches API requests to avoid redundant network load)",
+                        "... Development still in progress ...",
+                        "... Description not finished yet ..."
+                    ]
+                },
+                {
                     title: "Comfy (furniture shop)",
                     fullWebsiteUrl: "https://alexzagriychuk.com/comfy/",
                     githubUrl: "https://github.com/AlexZagriychuk/javascript-learning/tree/main/task2_8",
@@ -97,7 +110,7 @@ export function renderContent() {
                     shortDescription: "Website has functionality to add items to and remove from the cart from different pages. The cart's state is being stored in the browser's localStorage.",
                     fullDescriptionBullets: [
                         "Website has functionality to add items to and remove from the cart from different pages. The cart's state is being stored in the browser's localStorage.",
-                        "..."
+                        "... Description not finished yet ..."
                     ]
                 },
                 {
