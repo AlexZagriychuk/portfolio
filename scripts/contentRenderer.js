@@ -71,8 +71,8 @@ export function renderContent() {
         ],
         aboutMeTextParagraphs: [
             "I started my career in the software industry as a manual tester. After learning some programming skills outside of work and applying them to creating a few small utilities and automating some manual work processes, I fell in love with programming.",
-            "I worked as a manual tester for 2 years and then I switched to a test automation / developer in test role and have been working in this role for 6.5 years (including almost 2 years in Canada).",
-            "Now I want to leverage all my previously acquired skills and experience, start a new chapter in my technical career and switch from the SDET role into a Web Developer role (Frontend, Full Stack, or Backend Web Developer).",
+            "I worked as a manual tester for 2 years and then I switched to the Test Automation / Developer In Test role and have been working in this role for 6.5 years (including almost 2 years in Canada).",
+            "Now I want to leverage all my previously acquired skills and experience, start a new chapter in my technical career and switch from the SDET role into the Web Developer role (Frontend, Full Stack, or Backend Web Developer).",
         ],
         lifeFacts: [
             "Learned English while never being in any English-speaking country (before I moved to Canada). Achieved very high score for a non-native language speaker on my IELTS General English language proficiency exam (Overall band = 8.5, Reading = 9.0, Listening = 8.5, Speaking = 8.0, Writing = 7.5; where 9.0 is the maximum possible test score)",
@@ -121,11 +121,11 @@ export function renderContent() {
                     githubUrl: "https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website",
                     showWebsiteLink: true,
                     techStack: "HTML5, CSS3",
-                    shortDescription: "Responsive design was created by me from scratch. The website supports different browsers, including IE11.",
+                    shortDescription: "Responsive design is created by me from scratch. The website supports different browsers, including IE11.",
                     fullDescriptionBullets: [
-                        "This responsive website was created using HTML5 and CSS3 only (except for the burger menu button in the mobile view) while trying to follow the BEM methodology.",
+                        "This responsive website is created using HTML5 and CSS3 only (except for the burger menu button in the mobile view) while trying to follow the BEM methodology.",
                         "The website supports different browsers, including IE11.",
-                        "The website was designed by me from scratch (following the training task which required to create 3 pages: Home, About Us, and Contact), including the logo/favicon, which was designed in https://www.designevo.com/"
+                        "The website is designed by me from scratch including the logo/favicon, which is designed in https://www.designevo.com/ (following the training task which required to create 3 pages: Home, About Us, and Contact)", 
                     ]
                 },
                 {
@@ -136,7 +136,7 @@ export function renderContent() {
                     techStack: "HTML5, CSS3, JavaScript",
                     shortDescription: "Hosted the website on Netlify. Went through the problems with linking another website as a 'nested route' of the portfolio.",
                     fullDescriptionBullets: [
-                        "The portfolio website was created using HTML5, CSS3, and a little bit of JavaScript. Hosted the website on Netlify.",
+                        "The portfolio website is created using HTML5, CSS3, and a little bit of JavaScript. Hosted the website on Netlify.",
                         "Faced with a problem when attempted to display another website (The Bike Shop) as a 'nested route' of the portfolio website ('alexzagriychuk.com/bikeshop/'). Solved it by using the Netlify '_redirects' file with splat option activated ('/bikeshop/*  https://.../:splat 200').",
                         "The second major problem I went through was that the 'nested route' website, opened by the URL without closing slash '/' ('alexzagriychuk.com/bikeshop'), would break after attempting to navigate to another page ('ABOUT US', 'CONTACT'), because without the closing slash, all relative paths would try to get resources in the root page 'alexzagriychuk.com/' rather than the current page 'alexzagriychuk.com/bikeshop/'. I created a workaround solution by adding the 'Snippet injection' in the Netlify 'Build & deploy' / 'Post processing' section. This snippet adds JavaScript code before the end of the 'head' section of the 'nested route' website`s index.html file. This code adds the slash at the end of the URL if the 'nested route' website is opened without the trailing slash in the URL."
                     ]
@@ -160,6 +160,7 @@ export function renderContent() {
     }
 
 
+    // Rendering content
     const introDescElem = document.querySelector(".intro__desc")
     const aboutMeTextElem = document.querySelector(".about-me__text")
     const aboutMeLifeFactsListElem = document.getElementById("about-me__life-facts-list")
