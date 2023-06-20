@@ -86,7 +86,7 @@ export function renderContent() {
             "Trying out new hobbies (snowboarding, Latin dancing)",
         ],
         portfolio: {
-            disclaimer: "A few HTML / CSS / JavaScript / React portfolio projects I created while taking a mentorship-based Frontend Development course (no copy-pasting from tutorials, this program has tasks and a mentor who gives feedback after the task is submitted for review):",
+            disclaimer: "A few HTML + CSS / JavaScript / React + TypeScript portfolio projects I created while taking a mentorship-based Frontend Development course (no copy-pasting from tutorials, this program has tasks and code reviews with feedback from a mentor):",
             projects: [
                 {
                     title: "React App (Posts/Todos/Users)",
@@ -94,13 +94,14 @@ export function renderContent() {
                     githubUrl: "https://github.com/AlexZagriychuk/react-learning",
                     showWebsiteLink: true,
                     techStack: "React, Redux, TypeScript, CSS",
-                    shortDescription: "Interactive React App with Posts, Todos, Users data fetched via API (Redux controls the state, RTK Query caches API responses to avoid redundant network load)",
+                    shortDescription: "Interactive React App with Posts, Todos, and Users pages. Data fetched via API (Redux controls the state, RTK Query caches API responses to avoid redundant network load).",
                     fullDescriptionBullets: [
-                        "[Development In Progress]...",
-                        "Interactive React App with Posts, Todos, Users data fetched via API (Redux controls the state, RTK Query caches API requests to avoid redundant network load)",
-                        "Users data is being used for all 3 pages (Posts, Todos, Users)",
-                        "An active user can be changed after clicking on the button at the top right corner (Todos data and Posts styles would be different based on the currently active user)",
-                        "... Description not finished yet ..."
+                        "Interactive React SPA with Posts, Todos, and Users pages (Redux controls the global state)",
+                        "Data is fetched via API (RTK Query caches API requests and responses to avoid redundant network load)",
+                        "Users data is being used by all 3 pages (Posts, Todos, Users)",
+                        "An active user can be changed by clicking on the button at the top right corner (Todos data and Posts styles would be different based on the currently active user)",
+                        "When the ToDo items' completed checkbox is clicked, the UI is updated optimistically right away. API mutation is fired after a delay (debounce) to avoid sending multiple API requests for fast changes of the same ToDo item. If the ToDo item has not actually changed (even number of completed clicks) the API mutation request will not be fired. If the API mutation request has failed, the UI data and state will be rolled back.",
+                        "On the Users page, we can click on a user and open detailed user information",
                     ]
                 },
                 {
@@ -109,10 +110,11 @@ export function renderContent() {
                     githubUrl: "https://github.com/AlexZagriychuk/javascript-learning/tree/main/task2_8",
                     showWebsiteLink: true,
                     techStack: "HTML5, CSS3, JavaScript",
-                    shortDescription: "Website has functionality to add items to and remove from the cart from different pages. The cart's state is being stored in the browser's localStorage.",
+                    shortDescription: "This responsive website has functionality to +/-/remove items from the cart from different pages. The cart's state is being stored in the browser's localStorage.",
                     fullDescriptionBullets: [
-                        "Website has functionality to add items to and remove from the cart from different pages. The cart's state is being stored in the browser's localStorage.",
-                        "... Description not finished yet ..."
+                        "This responsive website has the functionality to +/-/remove items from the cart from different pages (Home, Products, Cart sidebar)",
+                        "The cart's state is shared between all pages and is being stored in the browser's localStorage",
+                        "On the Products page, we can use filters to specify what products we want to see"
                     ]
                 },
                 {
@@ -137,8 +139,8 @@ export function renderContent() {
                     shortDescription: "Hosted the website on Netlify. Went through the problems with linking another website as a 'nested route' of the portfolio.",
                     fullDescriptionBullets: [
                         "The portfolio website is created using HTML5, CSS3, and a little bit of JavaScript. Hosted the website on Netlify.",
-                        "Faced with a problem when attempted to display another website (The Bike Shop) as a 'nested route' of the portfolio website ('alexzagriychuk.com/bikeshop/'). Solved it by using the Netlify '_redirects' file with splat option activated ('/bikeshop/*  https://.../:splat 200').",
-                        "The second major problem I went through was that the 'nested route' website, opened by the URL without closing slash '/' ('alexzagriychuk.com/bikeshop'), would break after attempting to navigate to another page ('ABOUT US', 'CONTACT'), because without the closing slash, all relative paths would try to get resources in the root page 'alexzagriychuk.com/' rather than the current page 'alexzagriychuk.com/bikeshop/'. I created a workaround solution by adding the 'Snippet injection' in the Netlify 'Build & deploy' / 'Post processing' section. This snippet adds JavaScript code before the end of the 'head' section of the 'nested route' website`s index.html file. This code adds the slash at the end of the URL if the 'nested route' website is opened without the trailing slash in the URL."
+                        "Faced with a problem when attempting to display another website (The Bike Shop) as a 'nested route' of the portfolio website ('alexzagriychuk.com/bikeshop/'). Solved it by using the Netlify '_redirects' file with splat option activated ('/bikeshop/*  https://.../:splat 200').",
+                        "The second major problem I went through was that the 'nested route' website, opened by the URL without closing slash '/' ('alexzagriychuk.com/bikeshop'), would break after attempting to navigate to another page ('ABOUT US', 'CONTACT') because, without the closing slash, all relative paths would try to get resources in the root page 'alexzagriychuk.com/' rather than the current page 'alexzagriychuk.com/bikeshop/'. I created a workaround solution by adding the 'Snippet injection' in the Netlify 'Build & deploy' / 'Post processing' section. This snippet adds JavaScript code before the end of the 'head' section of the 'nested route' website`s index.html file. This code adds the slash at the end of the URL if the 'nested route' website is opened without the trailing slash in the URL."
                     ]
                 },
             ]
