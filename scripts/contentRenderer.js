@@ -97,11 +97,11 @@ export function renderContent() {
                     shortDescription: "Interactive React App with Posts, Todos, and Users pages. Data fetched via API (Redux controls the state, RTK Query caches API responses to avoid redundant network load).",
                     fullDescriptionBullets: [
                         "Interactive React SPA with Posts, Todos, and Users pages (Redux controls the global state)",
-                        "Data is fetched via API (RTK Query caches API requests and responses to avoid redundant network load)",
+                        "Data is fetched via API from https://jsonplaceholder.typicode.com/ (RTK Query caches API requests and responses to avoid redundant network load)",
                         "Users data is being used by all 3 pages (Posts, Todos, Users)",
                         "An active user can be changed by clicking on the button at the top right corner (Todos data and Posts styles would be different based on the currently active user)",
                         "When the ToDo items' completed checkbox is clicked, the UI is updated optimistically right away. API mutation is fired after a delay (debounce) to avoid sending multiple API requests for fast changes of the same ToDo item. If the ToDo item has not actually changed (even number of completed clicks) the API mutation request will not be fired. If the API mutation request has failed, the UI data and state will be rolled back.",
-                        "On the Users page, we can click on a user and open detailed user information",
+                        "On the Users page, we can click on a user and open detailed user information (with multiples tabs of content)",
                     ]
                 },
                 {
