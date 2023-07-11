@@ -90,7 +90,7 @@ export function renderContent() {
             projects: [
                 {
                     title: "React App (Posts/Todos/Users)",
-                    fullWebsiteUrl: "https://alexzagriychuk.com/react/",
+                    fullWebsiteUrl: "https://alexzagriychuk.com/portfolio/simple-fullstack-app/",
                     githubUrl: "https://github.com/AlexZagriychuk/react-learning",
                     showWebsiteLink: true,
                     techStack: "React, Redux, TypeScript, CSS",
@@ -106,7 +106,7 @@ export function renderContent() {
                 },
                 {
                     title: "Comfy (furniture shop)",
-                    fullWebsiteUrl: "https://alexzagriychuk.com/comfy/",
+                    fullWebsiteUrl: "https://alexzagriychuk.com/portfolio/comfy/",
                     githubUrl: "https://github.com/AlexZagriychuk/javascript-learning/tree/main/task2_8",
                     showWebsiteLink: true,
                     techStack: "HTML5, CSS3, JavaScript",
@@ -119,7 +119,7 @@ export function renderContent() {
                 },
                 {
                     title: "The Bike Shop",
-                    fullWebsiteUrl: "https://alexzagriychuk.com/bikeshop/",
+                    fullWebsiteUrl: "https://alexzagriychuk.com/portfolio/bikeshop/",
                     githubUrl: "https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website",
                     showWebsiteLink: true,
                     techStack: "HTML5, CSS3",
@@ -139,8 +139,8 @@ export function renderContent() {
                     shortDescription: "Hosted the website on Netlify. Went through the problems with linking another website as a 'nested route' of the portfolio.",
                     fullDescriptionBullets: [
                         "The portfolio website is created using HTML5, CSS3, and a little bit of JavaScript. Hosted the website on Netlify.",
-                        "Faced with a problem when attempting to display another website (The Bike Shop) as a 'nested route' of the portfolio website ('alexzagriychuk.com/bikeshop/'). Solved it by using the Netlify '_redirects' file with splat option activated ('/bikeshop/*  https://.../:splat 200').",
-                        "The second major problem I went through was that the 'nested route' website, opened by the URL without closing slash '/' ('alexzagriychuk.com/bikeshop'), would break after attempting to navigate to another page ('ABOUT US', 'CONTACT') because, without the closing slash, all relative paths would try to get resources in the root page 'alexzagriychuk.com/' rather than the current page 'alexzagriychuk.com/bikeshop/'. I created a workaround solution by adding the 'Snippet injection' in the Netlify 'Build & deploy' / 'Post processing' section. This snippet adds JavaScript code before the end of the 'head' section of the 'nested route' website`s index.html file. This code adds the slash at the end of the URL if the 'nested route' website is opened without the trailing slash in the URL."
+                        "Faced with a problem when attempting to display another website (The Bike Shop) as a 'nested route' of the portfolio website ('alexzagriychuk.com/portfolio/bikeshop/'). Solved it by using the Netlify '_redirects' file with splat option activated ('/portfolio/bikeshop/*  https://.../:splat 200').",
+                        "The second major problem I went through was that the 'nested route' website, opened by the URL without closing slash '/' ('alexzagriychuk.com/portfolio/bikeshop'), would break after attempting to navigate to another page ('ABOUT US', 'CONTACT') because, without the closing slash, all relative paths would try to get resources in the root page 'alexzagriychuk.com/' rather than the current page 'alexzagriychuk.com/portfolio/bikeshop/'. I created a workaround solution by adding the 'Snippet injection' in the Netlify 'Build & deploy' / 'Post processing' section. This snippet adds JavaScript code before the end of the 'head' section of the 'nested route' website`s index.html file. This code adds the slash at the end of the URL if the 'nested route' website is opened without the trailing slash in the URL."
                     ]
                 },
             ]
