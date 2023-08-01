@@ -256,7 +256,7 @@ section:nth-child(2n + 1) {
 .portfolio__project:focus .portfolio__project-info,
 .portfolio__project:focus-within .portfolio__project-info {
   height: 30%;
-  min-height: 160px;
+  min-height: 170px;
   transition: height 1s, min-height 1s;
 }
 
@@ -454,6 +454,19 @@ section:nth-child(2n + 1) {
   .portfolio__project-preview {
     min-height: 400px;
   }
+  .portfolio__project:hover .portfolio__project-info,
+  .portfolio__project:focus .portfolio__project-info,
+  .portfolio__project:focus-within .portfolio__project-info {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .portfolio__project:hover .portfolio__project-info,
+  .portfolio__project:focus .portfolio__project-info,
+  .portfolio__project:focus-within .portfolio__project-info {
+    min-height: 250px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -482,6 +495,7 @@ section:nth-child(2n + 1) {
   .portfolio__project:focus .portfolio__project-info,
   .portfolio__project:focus-within .portfolio__project-info {
     height: 20%;
+    min-height: 170px;
   }
 
   .portfolio__project-preview {

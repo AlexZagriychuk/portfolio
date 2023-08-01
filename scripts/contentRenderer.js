@@ -1,7 +1,7 @@
 import ElementUtils from "./elementUtils.js"
 
 
-function generatePortfolioProjectHTML({title, fullWebsiteUrl, githubUrl, showWebsiteLink, techStack, shortDescription, fullDescriptionBullets}) {
+function generatePortfolioProjectHTML({title, fullWebsiteUrl, githubUrls, showWebsiteLink, techStack, shortDescription, fullDescriptionBullets}) {
     let res = `
         <li class="portfolio__project" tabindex="0">
           <h3 class="portfolio__project-title">${title}</h3>
@@ -31,9 +31,12 @@ function generatePortfolioProjectHTML({title, fullWebsiteUrl, githubUrl, showWeb
     if(showWebsiteLink) {
         res += `<a class="portfolio-project-link icon-desktop-1" href="${fullWebsiteUrl}" target="_blank">Website</a>`
     }
-           
+    
+    githubUrls.forEach((githubUrl, index) => {
+        res += `<a class="portfolio-project-link icon-github-circled" href="${githubUrl}" target="_blank">Github${index > 0 ? " " + (index+1) : ""}</a>`
+    })
+
     res += `
-                <a class="portfolio-project-link icon-github-circled" href="${githubUrl}" target="_blank">Github</a>
               </div>
             </div>
           </div>
@@ -91,13 +94,14 @@ export function renderContent() {
                 {
                     title: "React App (Posts/Todos/Users)",
                     fullWebsiteUrl: "https://alexzagriychuk.com/portfolio/simple-fullstack-app/",
-                    githubUrl: "https://github.com/AlexZagriychuk/react-learning",
+                    githubUrls: ["https://github.com/AlexZagriychuk/react-learning", "https://github.com/AlexZagriychuk/node-jsonplaceholder-clone"],
                     showWebsiteLink: true,
-                    techStack: "React, Redux, TypeScript, CSS",
-                    shortDescription: "Interactive React App with Posts, Todos, and Users pages. Data fetched via API (Redux controls the state, RTK Query caches API responses to avoid redundant network load).",
+                    techStack: "TypeScript, React, Redux, CSS, Express, MongoDB",
+                    shortDescription: "Interactive React App with Posts, Todos, and Users pages. Data fetched via API (Redux controls the state, RTK Query caches API responses to avoid redundant network load). Backend written with Express + MongoDB.",
                     fullDescriptionBullets: [
                         "Interactive React SPA with Posts, Todos, and Users pages (Redux controls the global state)",
-                        "Data is fetched via API from https://jsonplaceholder.typicode.com/ (RTK Query caches API requests and responses to avoid redundant network load)",
+                        "Backend is written with Express and MongoDB (a copy of API endpoints provided by https://jsonplaceholder.typicode.com/)",
+                        "Data is fetched from the backend via API (RTK Query caches API requests and responses to avoid redundant network load)",
                         "Users data is being used by all 3 pages (Posts, Todos, Users)",
                         "An active user can be changed by clicking on the button at the top right corner (Todos data and Posts styles would be different based on the currently active user)",
                         "When the ToDo items' completed checkbox is clicked, the UI is updated optimistically right away. API mutation is fired after a delay (debounce) to avoid sending multiple API requests for fast changes of the same ToDo item. If the ToDo item has not actually changed (even number of completed clicks) the API mutation request will not be fired. If the API mutation request has failed, the UI data and state will be rolled back.",
@@ -107,7 +111,7 @@ export function renderContent() {
                 {
                     title: "Comfy (furniture shop)",
                     fullWebsiteUrl: "https://alexzagriychuk.com/portfolio/comfy/",
-                    githubUrl: "https://github.com/AlexZagriychuk/javascript-learning/tree/main/task2_8",
+                    githubUrls: ["https://github.com/AlexZagriychuk/javascript-learning/tree/main/task2_8"],
                     showWebsiteLink: true,
                     techStack: "HTML5, CSS3, JavaScript",
                     shortDescription: "This responsive website has functionality to +/-/remove items from the cart from different pages. The cart's state is being stored in the browser's localStorage.",
@@ -120,7 +124,7 @@ export function renderContent() {
                 {
                     title: "The Bike Shop",
                     fullWebsiteUrl: "https://alexzagriychuk.com/portfolio/bikeshop/",
-                    githubUrl: "https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website",
+                    githubUrls: ["https://github.com/AlexZagriychuk/html-css/tree/master/Task_1.5_Create_Bike_shop_website"],
                     showWebsiteLink: true,
                     techStack: "HTML5, CSS3",
                     shortDescription: "Responsive design is created by me from scratch. The website supports different browsers, including IE11.",
@@ -133,7 +137,7 @@ export function renderContent() {
                 {
                     title: "Portfolio Website",
                     fullWebsiteUrl: "https://alexzagriychuk.com",
-                    githubUrl: "https://github.com/AlexZagriychuk/portfolio",
+                    githubUrls: ["https://github.com/AlexZagriychuk/portfolio"],
                     showWebsiteLink: false,
                     techStack: "HTML5, CSS3, JavaScript",
                     shortDescription: "Hosted the website on Netlify. Went through the problems with linking another website as a 'nested route' of the portfolio.",
