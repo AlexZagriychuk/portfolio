@@ -234,39 +234,38 @@ section:nth-child(2n + 1) {
   background-color: transparent;
 }
 
-.portfolio__project-info {
+.portfolio__project-info-wrapper {
   position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: #aaa;
-  height: 0;
-  min-height: 0;
+  bottom: -100%;
   overflow: hidden;
-  transition: height 1s, min-height 1s;
+  max-height: 100%;
+  transition: bottom 1s;
+
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   z-index: 11;
 }
 
-.portfolio__project:hover .portfolio__project-info,
-.portfolio__project:focus .portfolio__project-info,
-.portfolio__project:focus-within .portfolio__project-info {
-  height: 30%;
-  min-height: 170px;
-  transition: height 1s, min-height 1s;
+.portfolio__project-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #aaa;
 }
 
-.portfolio__project:hover .portfolio__project-info.show-full-description,
-.portfolio__project:focus .portfolio__project-info.show-full-description,
-.portfolio__project:focus-within .portfolio__project-info.show-full-description {
-  height: 100%;
-  overflow-y: auto;
-  transition: height 1s, min-height 1s;
+.portfolio__project:hover .portfolio__project-info-wrapper,
+.portfolio__project:focus .portfolio__project-info-wrapper,
+.portfolio__project:focus-within .portfolio__project-info-wrapper {
+  bottom: 0;
+  transition: bottom 0.8s;
+}
 
+.portfolio__project:hover .portfolio__project-info-wrapper.show-full-description,
+.portfolio__project:focus .portfolio__project-info-wrapper.show-full-description,
+.portfolio__project:focus-within .portfolio__project-info-wrapper.show-full-description {
+  overflow-y: auto;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -278,12 +277,12 @@ section:nth-child(2n + 1) {
 }
 
 .portfolio__project-info .short-description,
-.portfolio__project-info.show-full-description .full-description {
+.portfolio__project-info-wrapper.show-full-description .full-description {
   display: block;
 }
 
 .portfolio__project-info .full-description,
-.portfolio__project-info.show-full-description .short-description {
+.portfolio__project-info-wrapper.show-full-description .short-description {
   display: none;
 }
 
@@ -454,19 +453,6 @@ section:nth-child(2n + 1) {
   .portfolio__project-preview {
     min-height: 400px;
   }
-  .portfolio__project:hover .portfolio__project-info,
-  .portfolio__project:focus .portfolio__project-info,
-  .portfolio__project:focus-within .portfolio__project-info {
-    min-height: 200px;
-  }
-}
-
-@media (max-width: 1150px) {
-  .portfolio__project:hover .portfolio__project-info,
-  .portfolio__project:focus .portfolio__project-info,
-  .portfolio__project:focus-within .portfolio__project-info {
-    min-height: 250px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -489,13 +475,6 @@ section:nth-child(2n + 1) {
 
   .portfolio__project:nth-child(2n) {
     margin-left: 0;
-  }
-
-  .portfolio__project:hover .portfolio__project-info,
-  .portfolio__project:focus .portfolio__project-info,
-  .portfolio__project:focus-within .portfolio__project-info {
-    height: 20%;
-    min-height: 170px;
   }
 
   .portfolio__project-preview {
@@ -527,12 +506,6 @@ section:nth-child(2n + 1) {
 
   .portfolio__project-preview {
     min-height: 400px;
-  }
-
-  .portfolio__project:hover .portfolio__project-info,
-  .portfolio__project:focus .portfolio__project-info,
-  .portfolio__project:focus-within .portfolio__project-info {
-    min-height: 250px;
   }
 
   .portfolio-project-link + .portfolio-project-link {

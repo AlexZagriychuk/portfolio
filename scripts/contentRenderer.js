@@ -8,14 +8,15 @@ function generatePortfolioProjectHTML({title, fullWebsiteUrl, githubUrls, showWe
           <div class="portfolio__project-preview-and-info">
             <iframe class="portfolio__project-preview" src="${fullWebsiteUrl}" scrolling="no" tabindex="-1"></iframe>
             <div class="portfolio__project-preview-overlay"></div>
-            <div class="portfolio__project-info">
-              <div class="portfolio__project-description short-description">
-                <p><span>Tech stack: ${techStack}.</span> ${shortDescription}</p>
-                <a class="portfolio__project-show-info project-show-more">Show more...</a>
-              </div>
-              <div class="portfolio__project-description full-description">
-                <p>Tech stack: ${techStack}</p>
-                  <ul>
+            <div class="portfolio__project-info-wrapper">
+                <div class="portfolio__project-info">
+                <div class="portfolio__project-description short-description">
+                    <p><span>Tech stack: ${techStack}.</span> ${shortDescription}</p>
+                    <a class="portfolio__project-show-info project-show-more">Show more...</a>
+                </div>
+                <div class="portfolio__project-description full-description">
+                    <p>Tech stack: ${techStack}</p>
+                    <ul>
     `
 
     fullDescriptionBullets.forEach(bullet => {
@@ -37,6 +38,7 @@ function generatePortfolioProjectHTML({title, fullWebsiteUrl, githubUrls, showWe
     })
 
     res += `
+                </div>
               </div>
             </div>
           </div>
@@ -92,7 +94,7 @@ export function renderContent() {
             disclaimer: "A few HTML + CSS / JavaScript / React + TypeScript portfolio projects I created while taking a mentorship-based Frontend Development course (no copy-pasting from tutorials, this program has tasks and code reviews with feedback from a mentor):",
             projects: [
                 {
-                    title: "React App (Posts/Todos/Users)",
+                    title: "Full Stack App (Posts/Todos/Users)",
                     fullWebsiteUrl: "https://alexzagriychuk.com/portfolio/simple-fullstack-app/",
                     githubUrls: ["https://github.com/AlexZagriychuk/react-learning", "https://github.com/AlexZagriychuk/node-jsonplaceholder-clone"],
                     showWebsiteLink: true,
